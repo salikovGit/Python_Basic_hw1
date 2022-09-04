@@ -11,8 +11,13 @@
 
 
 def coord_quarter():
-    a = input("Enter coord (X and Y) separated by space: ").split()
-    x, y = int(a[0]), int(a[1])
+    while True:
+        a = input("Enter integer coord (X and Y) separated by space: ").split()
+        try:
+            x, y = int(a[0]), int(a[1])
+            break
+        except ValueError:
+            print("X or Y is not an integer")
     if x > 0 and y > 0:
         print(1)
     elif x > 0 and y < 0:
