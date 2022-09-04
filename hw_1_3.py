@@ -18,6 +18,8 @@ def coord_quarter():
             break
         except ValueError:
             print("X or Y is not an integer")
+        except IndexError:
+            print("Only one value found")
     if x > 0 and y > 0:
         print(1)
     elif x > 0 and y < 0:
